@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * Primarily Drupal hooks.
+ */
+
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+function block_styles_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $style = _block_styles_get_style($variables['elements']['#id']);
+  if ( $style['theme'] ) {
+    $suggestions[] = $style['theme'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_block() for blocks.
+ */
+function block_styles_preprocess_block(&$variables) {
+  $style = _block_styles_get_style($variables['elements']['#id']);
+  if ( $style['classes'] ) {
+    $variables['attributes']['class'][] = $style['classes'];
+  }
+  if ( $style['text'] ) {
+    $variables['configuration']['button_text'] = t($style['text']);
+  } 
+  else {
+    $variables['configuration']['button_text'] = $variables['configuration']['label'];
+  }
+}
+
+/**
+ * Implements hook_form_alter() adding administration for block layouts.
+ */
+
+function block_styles_form_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $style = _block_styles_get_style($entity->id());
+  $styles_manager = \Drupal\styles_api\Style::stylePluginManager();
+  $styles = [];
+  $plugin_definitions = $styles_manager->getDefinitions();
+  foreach ($plugin_definitions as $plugin_id => $plugin_definition) {
+    if ($plugin_definition['type'] == 'block') {
+      $styles[$plugin_id] = $plugin_definition['label'];
+    }
+  }
+
+  $disabled = TRUE;
+  $type = 'hidden';
+  $attributes = array('style' => array('display' => 'none'));
+  $results = $form_state->getValues();
+  if (isset($results['block_styles']['theme'])) {
+    if ($plugin_definitions[$results['block_styles']['theme']]['extras']['label']) {
+      $disabled = FALSE;
+      $type = 'textfield';
+	}
+  }
+  else {
+    if (!empty($plugin_definitions[$style['theme']]['extras']['label'])) {
+      $disabled = FALSE;
+      $type = 'textfield';
+	}
+  }
+
+  // Block styles
+  $form['block_styles'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Block Styles Template'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['block_styles']['theme'] = array(
+    '#type' => 'select',
+    '#title' => t('Select block style'),
+    '#default_value' => $style['theme'],
+    '#empty_option' => t('None'),
+    '#options' => $styles,
+    '#description' => t('The selected layout template will be applied to block wrapper, replacing block.html.twig'),
+    '#ajax' => array(
+      // When 'event' occurs, Drupal will perform an ajax request in the
+      // background. Usually the default value is sufficient (eg. change for
+      // select elements), but valid values include any jQuery event,
+      // most notably 'mousedown', 'blur', and 'submit'.
+      // 'event' => 'change',
+      'callback' => '_block_styles_theme_callback',
+      'wrapper' => 'text-replace',
+    ),
+  );
+  $form['block_styles']['text'] = array(
+    '#type' => $type,
+    '#title' => t('Text for button label'),
+    '#default_value' => $style['text'],
+    '#description' => t('Text to use on the button that show the block content.'),
+    '#size' => 60,
+    '#maxlength' => 64, 
+    '#prefix' => '<div id="text-replace">',
+    '#suffix' => '</div>',
+    '#disabled' => $disabled,
+  );
+  $form['block_styles']['classes'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Add classes to block wrapper'),
+    '#default_value' => $style['classes'],
+    '#description' => t('Add classes for block wrapper, separated by spaces.'),
+    '#size' => 60,
+    '#maxlength' => 128, 
+  );
+  $form['actions']['submit']['#submit'][] = '_block_styles_form_submit';
+}
+
+function _block_styles_theme_callback($form, $form_state) {
+  return $form['block_styles']['text'];
+}
+
+function _block_styles_form_submit(array &$form, FormStateInterface $form_state) {
+  $results = $form_state->getValues();
+  $entity = $form_state->getFormObject()->getEntity();
+  $block_layout_storage = \Drupal::entityManager()->getStorage('block_styles');
+  $block_layout = $block_layout_storage->load($entity->id());
+  if(isset($block_layout)) {
+    $block_layout->set('theme', $results['block_styles']['theme']);
+    $block_layout->set('classes', $results['block_styles']['classes']);
+    $block_layout->set('text', $results['block_styles']['text']);
+  }
+  else {
+    $block_layout = entity_create('block_styles', array(
+      'id' => $entity->id(), 
+      'theme' => $results['block_styles']['theme'],
+      'classes' => $results['block_styles']['classes'],
+      'text' => $results['block_styles']['text'],
+	));
+  }
+  $status = $block_layout->save();
+  if ($status) {
+    \Drupal::logger('block_styles')->notice('Block style template was @type, for block %title to theme %theme',
+      array(
+        '@type' => $status == 1 ? 'Saved' : 'Updated',
+        '%title' => $entity->id(),
+        '%theme' => $results['block_styles']['theme'],
+      )
+	);
+  }
+}
+
+function _block_styles_get_style($block_id) {
+  $block_styles_storage = \Drupal::entityManager()->getStorage('block_styles');
+  $block = $block_styles_storage->load($block_id);
+  return isset($block) ? $block->getStyle() : FALSE;
+}

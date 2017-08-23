@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ess_test_paragraphs
+    - node.type.ess_test
+  module:
+    - entity_reference_revisions
+id: node.ess_test.field_ess_test_paragraphs
+field_name: field_ess_test_paragraphs
+entity_type: node
+bundle: ess_test
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      ess_test:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,13 @@
+name: Block Styles Bootstrap
+description: Bootstrap template suggestions for Block Styles.
+type: module
+package: Styles
+# core: 8.x
+dependencies:
+  - block_styles
+
+# Information added by Drupal.org packaging script on 2017-03-07
+version: '8.x-1.2'
+core: '8.x'
+project: 'block_styles'
+datestamp: 1488901685

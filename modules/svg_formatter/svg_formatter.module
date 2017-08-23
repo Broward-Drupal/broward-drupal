@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains svg_formatter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function svg_formatter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the svg_formatter module.
+    case 'help.page.svg_formatter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Add SVG image formatter to file field.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function svg_formatter_theme() {
+  return [
+    'svg_formatter' => [
+      'variables' => [
+        'inline' => FALSE,
+        'svg_data' => NULL,
+        'attributes' => NULL,
+        'uri' => NULL,
+      ],
+    ],
+  ];
+}

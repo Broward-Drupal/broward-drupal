@@ -1,0 +1,14 @@
+name: 'Search pages'
+description: 'Create search pages using Search API indexes.'
+dependencies:
+  - search_api
+# core: 8.x
+package: Search
+type: module
+configure: entity.search_api_page.collection
+
+# Information added by Drupal.org packaging script on 2017-03-04
+version: '8.x-1.0-alpha11+8-dev'
+core: '8.x'
+project: 'search_api_page'
+datestamp: 1488633486

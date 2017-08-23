@@ -1,0 +1,16 @@
+block_styles.block_styles.*:
+  type: config_entity
+  label: 'Block Styles'
+  mapping:
+    id:
+      type: string
+      label: 'Block ID'
+    theme:
+      type: string
+      label: 'Theme Suggestion'
+    classes:
+      type: string
+      label: 'Classes'
+    text:
+      type: string
+      label: 'Text'

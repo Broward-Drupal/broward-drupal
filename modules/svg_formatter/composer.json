@@ -1,0 +1,21 @@
+{
+    "name": "drupal/svg_formatter",
+    "description": "Add SVG image formatter to file field.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/svg_formatter",
+    "authors": [
+        {
+            "name": "Goran Nikolovski",
+            "email": "nikolovski84@gmail.com",
+            "homepage": "http://gorannikolovski.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/node/add/project-issue/svg_formatter",
+        "email": "nikolovski84@gmail.com"
+    },
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Install hook for the External Links module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function extlink_install() {
+  // Weight needs to be 1 for compatibility with SpamSpan.
+  module_set_weight('extlink', 1);
+}

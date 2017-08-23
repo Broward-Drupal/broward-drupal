@@ -1,0 +1,155 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.ess_test.default
+    - field.field.node.ess_test.body
+    - field.field.node.ess_test.field_ess_test_boolean
+    - field.field.node.ess_test.field_ess_test_comments
+    - field.field.node.ess_test.field_ess_test_date
+    - field.field.node.ess_test.field_ess_test_dynamic_reference
+    - field.field.node.ess_test.field_ess_test_email
+    - field.field.node.ess_test.field_ess_test_file
+    - field.field.node.ess_test.field_ess_test_image
+    - field.field.node.ess_test.field_ess_test_link
+    - field.field.node.ess_test.field_ess_test_paragraphs
+    - field.field.node.ess_test.field_ess_test_taxonomy
+    - field.field.node.ess_test.field_ess_test_telephone
+    - field.field.node.ess_test.field_ess_test_timestamp
+    - node.type.ess_test
+  module:
+    - comment
+    - datetime
+    - dynamic_entity_reference
+    - entity_reference_revisions
+    - file
+    - image
+    - link
+    - telephone
+    - text
+    - user
+id: node.ess_test.default
+targetEntityType: node
+bundle: ess_test
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ess_test_boolean:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ess_test_comments:
+    weight: 13
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_ess_test_date:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ess_test_dynamic_reference:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: dynamic_entity_reference_label
+    region: content
+  field_ess_test_email:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ess_test_file:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_ess_test_image:
+    weight: 9
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ess_test_link:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ess_test_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 12
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_ess_test_taxonomy:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ess_test_telephone:
+    weight: 7
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_ess_test_timestamp:
+    weight: 6
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    type: timestamp
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

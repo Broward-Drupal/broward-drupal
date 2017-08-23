@@ -1,0 +1,3 @@
+widgets:
+  js:
+    https://platform.twitter.com/widgets.js: { type: external }

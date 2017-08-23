@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Visual styles for block bootstrap modal.
+ */
+
+.block-bootstrap-collapse .btn-collapse {
+  width: 100%;
+}
+.block-bootstrap-collapse .collapse {
+  margin-top: 15px;
+}

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ess_test_date
+    - node.type.ess_test
+  module:
+    - datetime
+id: node.ess_test.field_ess_test_date
+field_name: field_ess_test_date
+entity_type: node
+bundle: ess_test
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

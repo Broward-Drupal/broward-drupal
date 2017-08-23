@@ -1,0 +1,9 @@
+{
+    "name": "drupal/entity_share",
+    "description": "Provides an UI to share entities.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/jsonapi": "~1.0"
+    }
+}

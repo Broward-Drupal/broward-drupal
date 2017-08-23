@@ -1,0 +1,50 @@
+diff --git a/auto_entitylabel.module b/auto_entitylabel.module
+index c0d0efb..0305a39 100644
+--- a/auto_entitylabel.module
++++ b/auto_entitylabel.module
+@@ -42,14 +42,14 @@ function auto_entitylabel_entity_type_alter(array &$entity_types) {
+ }
+ 
+ /**
+- * Implements hook_form_alter().
++ * Prepares a form's entity label field for automatic handling.
+  */
+-function auto_entitylabel_form_alter(&$form, FormStateInterface $form_state) {
+-  if (isset($form['#entity_builders']) && empty($form['#auto_entitylabel_processed'])) {
++function auto_entitylabel_prepare_entityform(&$form, FormStateInterface $form_state, ContentEntityInterface $entity) {
++  if (empty($form['#auto_entitylabel_processed'])) {
+     $decorator = \Drupal::service('auto_entitylabel.entity_decorator');
+     /** @var \Drupal\auto_entitylabel\AutoEntityLabelManager $entity */
+-    $entity = $decorator->decorate($form_state->getFormObject()->getEntity());
+-
++    $entity = $decorator->decorate($entity);
++    
+     if ($entity instanceof \Drupal\auto_entitylabel\AutoEntityLabelManagerInterface) {
+       if ($entity->hasAutoLabel()) {
+         $label = $entity->getLabelName();
+@@ -78,6 +78,25 @@ function auto_entitylabel_form_alter(&$form, FormStateInterface $form_state) {
+ }
+ 
+ /**
++ * Implements hook_form_alter().
++ */
++function auto_entitylabel_form_alter(&$form, FormStateInterface $form_state) {
++  if (isset($form['#entity_builders'])) {
++    $entity = $form_state->getFormObject()->getEntity();
++    auto_entitylabel_prepare_entityform($form, $form_state, $entity);
++  }
++}
++
++/**
++ * Implements hook_inline_entity_form_entity_form_alter().
++ */
++function auto_entitylabel_inline_entity_form_entity_form_alter(&$form, &$form_state) {
++  $entity = $form['#entity'];
++  auto_entitylabel_prepare_entityform($form, $form_state, $entity);
++}
++
++
++/**
+  * Implements hook_entity_prepare_view().
+  */
+ function auto_entitylabel_entity_prepare_view($entity_type_id, array $entities, array $displays, $view_mode) {

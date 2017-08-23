@@ -1,0 +1,8 @@
+entity_share_client.admin_content_page:
+  title: 'Entity share'
+  route_name: entity_share_client.admin_content_page
+  base_route: system.admin_content
+entity_share_client.admin_content_pull_form:
+  title: 'Pull entities'
+  route_name: entity_share_client.admin_content_pull_form
+  parent_id: entity_share_client.admin_content_page

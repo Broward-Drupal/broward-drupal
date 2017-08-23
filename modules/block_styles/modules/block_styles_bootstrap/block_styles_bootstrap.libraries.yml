@@ -1,0 +1,21 @@
+block_bootstrap_modal:
+  version: VERSION
+  css:
+    component:
+      templates/bootstrap_modal/block--bootstrap--modal.css: {}
+  dependencies:
+    - core/jquery.once
+
+block_bootstrap_dropdown:
+  version: VERSION
+  js:
+    templates/bootstrap_dropdown/block--bootstrap--dropdown.js: {}
+  css:
+    component:
+      templates/bootstrap_dropdown/block--bootstrap--dropdown.css: {}
+
+block_bootstrap_collapse:
+  version: VERSION
+  css:
+    component:
+      templates/bootstrap_collapse/block--bootstrap--collapse.css: {}

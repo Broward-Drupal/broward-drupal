@@ -1,0 +1,8 @@
+extlink_target: 0
+extlink_subdomains: 1
+extlink_alert: 0
+extlink_alert_text: 'This link will take you to an external web site. We are not responsible for their content.'
+extlink_exclude: ''
+extlink_include: ''
+extlink_class: 'ext'
+extlink_mailto_class: 'mailto'

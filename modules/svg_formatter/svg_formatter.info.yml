@@ -1,0 +1,11 @@
+name: SVG Formatter
+type: module
+description: 'Add SVG image formatter to file field.'
+# core: 8.x
+package: Field types
+
+# Information added by Drupal.org packaging script on 2017-05-28
+version: '8.x-1.05'
+core: '8.x'
+project: 'svg_formatter'
+datestamp: 1495994585

@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the entity share server module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_delete().
+ *
+ * Remove user from channels if needed.
+ */
+function entity_share_server_entity_delete(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'user') {
+    /** @var \Drupal\user\UserInterface $user */
+    $user = $entity;
+    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
+    $entity_type_manager = \Drupal::service('entity_type.manager');
+    /** @var \Drupal\entity_share_server\Entity\ChannelInterface[] $channels */
+    $channels = $entity_type_manager
+      ->getStorage('channel')
+      ->loadMultiple();
+    foreach ($channels as $channel) {
+      if ($channel->removeAuthorizedUser($user->uuid())) {
+        $channel->save();
+      }
+    }
+  }
+}

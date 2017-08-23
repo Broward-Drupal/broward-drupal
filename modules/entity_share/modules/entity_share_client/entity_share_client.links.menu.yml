@@ -1,0 +1,16 @@
+# Remote menu items definition.
+entity.remote.collection:
+  title: 'Remote websites'
+  route_name: entity.remote.collection
+  description: 'List remote websites'
+  parent: entity_share.admin_config_page
+
+entity_share_client.admin_content_page:
+  title: 'Entity share'
+  route_name: entity_share_client.admin_content_page
+  parent: system.admin_content
+
+entity_share_client.admin_content_pull_form:
+  title: 'Pull entities'
+  route_name: entity_share_client.admin_content_pull_form
+  parent: entity_share_client.admin_content_page

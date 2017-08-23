@@ -1,0 +1,52 @@
+block__bootstrap__dropdown:
+  label: Bootstrap Dropdown
+  type: block
+  category: Block
+  configuration:
+    path: templates/bootstrap_dropdown
+    base hook: block
+    render element: elements
+  extras:
+    placement: 1
+    label: 1
+block__bootstrap__modal:
+  label: Bootstrap Modal
+  type: block
+  category: Block
+  configuration:
+    path: templates/bootstrap_modal
+    base hook: block
+    render element: elements
+  extras:
+    placement: 1
+    label: 1
+block__bootstrap__collapse:
+  label: Bootstrap Collapse
+  type: block
+  category: Block
+  configuration:
+    path: templates/bootstrap_collapse
+    base hook: block
+    render element: elements
+  extras:
+    placement: 1
+    label: 1
+block__bootstrap__card:
+  label: Bootstrap Card
+  type: block
+  category: Block
+  configuration:
+    path: templates/bootstrap_card
+    base hook: block
+    render element: elements
+block__bootstrap__popover:
+  label: Bootstrap Popover
+  type: block
+  category: Block
+  configuration:
+    path: templates/bootstrap_card
+    base hook: block
+    render element: elements
+  extras:
+    placement: 1
+    label: 1

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ess_test.field_ess_test_text_plain
+    - paragraphs.paragraphs_type.ess_test
+id: paragraph.ess_test.default
+targetEntityType: paragraph
+bundle: ess_test
+mode: default
+content:
+  field_ess_test_text_plain:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

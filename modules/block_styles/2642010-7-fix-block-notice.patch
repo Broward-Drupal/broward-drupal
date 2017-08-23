@@ -1,0 +1,13 @@
+diff --git a/block_styles.module b/block_styles.module
+index d8f8926..432ca77 100644
+--- a/block_styles.module
++++ b/block_styles.module
+@@ -62,7 +62,7 @@ function block_styles_form_block_form_alter(&$form, \Drupal\Core\Form\FormStateI
+ 	}
+   }
+   else {
+-    if ($plugin_definitions[$style['theme']]['extras']['label']) {
++    if (!empty($plugin_definitions[$style['theme']]['extras']['label'])) {
+       $disabled = FALSE;
+       $type = 'textfield';
+ 	}

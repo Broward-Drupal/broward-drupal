@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ess_test_taxonomy
+    - node.type.ess_test
+    - taxonomy.vocabulary.ess_test
+id: node.ess_test.field_ess_test_taxonomy
+field_name: field_ess_test_taxonomy
+entity_type: node
+bundle: ess_test
+label: Taxonomy
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ess_test: ess_test
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Visual styles for block bootstrap dropdown.
+ */
+
+.block-bootstrap-dropdown .dropdown-toggle {
+  width: 100%;
+}
+.block-bootstrap-dropdown .dropdown-menu {
+  width: 100%;
+  padding: 15px;
+  margin: 0px 0px 20px;
+}

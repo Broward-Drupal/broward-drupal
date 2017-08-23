@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ess_test
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.ess_test
+target_entity_type_id: node
+target_bundle: ess_test
+default_langcode: site_default
+language_alterable: true

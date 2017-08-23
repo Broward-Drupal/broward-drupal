@@ -1,0 +1,12 @@
+name: Twitter Block
+type: module
+description: 'Provides configurable blocks for a Twitter feed.'
+# core: 8.x
+dependencies:
+  - block
+
+# Information added by Drupal.org packaging script on 2017-03-15
+version: '8.x-3.0-alpha0'
+core: '8.x'
+project: 'twitter_block'
+datestamp: 1489574287

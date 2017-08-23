@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * This is the External Links module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+function extlink_modules_installed($modules) {
+  if (in_array('extlink', $modules)) {
+    // Be friendly to your users: what to do after install?
+    $url = Url::fromRoute('extlink_admin.settings');
+    if (PHP_SAPI != 'cli') {
+      drupal_set_message(t('You can now <a href="@extlink_admin">configure the External Links module</a> for your site.',
+        ['@extlink_admin' => $url->toString()]), 'status');
+    }
+  }
+}
+
+/**
+ * Implements hook_help().
+ */
+function extlink_help($route_name, RouteMatchInterface $arg) {
+  switch ($route_name) {
+    case 'help.page.extlink':
+      $output = '';
+      $output .= '<p>' . t('External Links is used to differentiate between internal and external links. Using jQuery, it will find all external links on a page and add an external icon indicating it will take you offsite or a mail icon for mailto links.') . '</p>';
+      return ['#markup' => $output];
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function extlink_page_attachments(array &$attachments) {
+  $config = \Drupal::config('extlink.settings');
+  $attachments['#attached']['library'][] = 'extlink/drupal.extlink';
+
+  $attachments['#attached']['drupalSettings']['data']['extlink'] = array(
+    'extTarget'      => $config->get('extlink_target', 0),
+    'extClass'       => $config->get('extlink_class', 'ext'),
+    'extLabel'       => Html::escape($config->get('extlink_label', t('(link is external)'))),
+    'extImgClass'    => $config->get('extlink_img_class', 0),
+    'extSubdomains'  => $config->get('extlink_subdomains', 1),
+    'extExclude'     => $config->get('extlink_exclude', ''),
+    'extInclude'     => $config->get('extlink_include', ''),
+    'extCssExclude'  => $config->get('extlink_css_exclude', ''),
+    'extCssExplicit' => $config->get('extlink_css_explicit', ''),
+    'extAlert'       => $config->get('extlink_alert', 0),
+    'extAlertText'   => $config->get('extlink_alert_text', t('This link will take you to an external web site. We are not responsible for their content.')),
+    'mailtoClass'    => $config->get('extlink_mailto_class', 'mailto'),
+    'mailtoLabel'    => Html::escape($config->get('extlink_mailto_label', t('(link sends e-mail)'))),
+  );
+}

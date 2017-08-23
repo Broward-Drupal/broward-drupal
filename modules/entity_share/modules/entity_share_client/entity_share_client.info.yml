@@ -1,0 +1,14 @@
+name: Entity share client
+type: module
+description: Provides an UI to share entities.
+# core: 8.x
+package: Web services
+dependencies:
+  - entity_share:entity_share
+  - jsonapi:jsonapi
+
+# Information added by Drupal.org packaging script on 2017-07-31
+version: '8.x-1.0-alpha3'
+core: '8.x'
+project: 'entity_share'
+datestamp: 1501493408

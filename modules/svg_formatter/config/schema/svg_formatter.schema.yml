@@ -1,0 +1,22 @@
+field.formatter.settings.svg_formatter:
+  type: mapping
+  label: SVG Formatter settings
+  mapping:
+    inline:
+      type: boolean
+      label: Inline
+    apply_dimensions:
+      type: boolean
+      label: Apply dimensions
+    width:
+      type: integer
+      label: Width
+    height:
+      type: integer
+      label: Height
+    enable_alt:
+      type: boolean
+      label: Enable alt attribute
+    enable_title:
+      type: boolean
+      label: Enable title attribute

@@ -1,0 +1,4 @@
+admin:
+  css:
+    theme:
+      css/entity_share_client.admin.css: {}

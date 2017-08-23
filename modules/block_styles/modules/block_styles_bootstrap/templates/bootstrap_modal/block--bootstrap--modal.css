@@ -1,0 +1,8 @@
+/**
+ * @file
+ * Visual styles for block bootstrap modal.
+ */
+
+.block-bootstrap-modal .btn-modal {
+  width: 100%;
+}

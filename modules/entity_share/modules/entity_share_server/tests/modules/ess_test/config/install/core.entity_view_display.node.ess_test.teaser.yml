@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ess_test.body
+    - field.field.node.ess_test.field_ess_test_boolean
+    - field.field.node.ess_test.field_ess_test_comments
+    - field.field.node.ess_test.field_ess_test_date
+    - field.field.node.ess_test.field_ess_test_dynamic_reference
+    - field.field.node.ess_test.field_ess_test_email
+    - field.field.node.ess_test.field_ess_test_file
+    - field.field.node.ess_test.field_ess_test_image
+    - field.field.node.ess_test.field_ess_test_link
+    - field.field.node.ess_test.field_ess_test_paragraphs
+    - field.field.node.ess_test.field_ess_test_taxonomy
+    - field.field.node.ess_test.field_ess_test_telephone
+    - field.field.node.ess_test.field_ess_test_timestamp
+    - node.type.ess_test
+  module:
+    - text
+    - user
+id: node.ess_test.teaser
+targetEntityType: node
+bundle: ess_test
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_ess_test_boolean: true
+  field_ess_test_comments: true
+  field_ess_test_date: true
+  field_ess_test_dynamic_reference: true
+  field_ess_test_email: true
+  field_ess_test_file: true
+  field_ess_test_image: true
+  field_ess_test_link: true
+  field_ess_test_paragraphs: true
+  field_ess_test_taxonomy: true
+  field_ess_test_telephone: true
+  field_ess_test_timestamp: true
+  langcode: true

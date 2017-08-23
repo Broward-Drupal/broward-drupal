@@ -1,0 +1,22 @@
+services:
+  entity_share_client.remote_manager:
+    class: Drupal\entity_share_client\Service\RemoteManager
+  entity_share_client.jsonapi_helper:
+    class: Drupal\entity_share_client\Service\JsonapiHelper
+    arguments:
+      - '@serializer'
+      - '@serializer.normalizer.jsonapi_document_toplevel.jsonapi'
+      - '@jsonapi.resource_type.repository'
+      - '@entity_type.bundle.info'
+      - '@entity_type.manager'
+      - '@entity.definition_update_manager'
+      - '@stream_wrapper_manager'
+      - '@language_manager'
+      - '@entity_share_client.remote_manager'
+      - '@event_dispatcher'
+  entity_share_client.entity_reference_revisions_relationship_subscriber:
+    class: Drupal\entity_share_client\EventSubscriber\EntityReferenceRevisionsRelationshipSubscriber
+    arguments:
+      - '@entity_type.manager'
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,24 @@
+uuid: 3cfc827f-07ff-456e-86db-a831e3770a03
+langcode: en
+status: true
+dependencies:
+  module:
+    - imce
+    - node
+third_party_settings:
+  imce:
+    use: 1
+    scheme: public
+id: test_profile_imce
+label: 'Test profile imce'
+description: 'This is a test profile with imce settings'
+matchers:
+  556010a3-e317-48b3-b4ed-854c10f4b950:
+    uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: 'by [node:author] | [node:created:medium]'
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false

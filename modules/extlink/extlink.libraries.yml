@@ -1,0 +1,12 @@
+drupal.extlink:
+  version: VERSION
+  js:
+    extlink.min.js: {}
+  css:
+    theme:
+      extlink.css: { every_page: 1 }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

@@ -1,0 +1,15 @@
+name: Field Permissions
+type: module
+hidden: false
+description: 'Set field-level permissions to create, update or view fields.'
+configure: field_permissions.reports
+package: field
+# version: 8.x-1.x-dev
+# core: '8.x'
+# datestamp: 1449315106
+
+# Information added by Drupal.org packaging script on 2017-05-26
+version: '8.x-1.0-beta2+0-dev'
+core: '8.x'
+project: 'field_permissions'
+datestamp: 1495836185

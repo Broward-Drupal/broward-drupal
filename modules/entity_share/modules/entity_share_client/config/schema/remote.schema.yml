@@ -1,0 +1,21 @@
+entity_share_client.remote.*:
+  type: config_entity
+  label: 'Remote config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    url:
+      type: string
+      label: 'URL'
+    basic_auth_username:
+      type: string
+      label: 'Basic auth username'
+    basic_auth_password:
+      type: string
+      label: 'Basic auth password'

@@ -1,0 +1,125 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the entity share client test module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\entity_share_client\Entity\Remote;
+
+/**
+ * Implements hook_cron().
+ *
+ * Example of basic import in cron. Import all channels of all remotes.
+ */
+function entity_share_client_test_cron() {
+  /** @var \Drupal\entity_share_client\Service\RemoteManagerInterface $remote_manager */
+  $remote_manager = \Drupal::service('entity_share_client.remote_manager');
+  $remotes = Remote::loadMultiple();
+  /** @var \Drupal\entity_share_client\Service\JsonapiHelperInterface $jsonapi_helper */
+  $jsonapi_helper = \Drupal::service('entity_share_client.jsonapi_helper');
+  /** @var \Drupal\Core\Queue\QueueFactory $queue_factory */
+  $queue_factory = \Drupal::service('queue');
+  // Retrieve and init the queue in case it is not already created.
+  $queue = $queue_factory->get('entity_share_client_test');
+  $queue->createQueue();
+  /** @var \Drupal\Core\State\StateInterface $state */
+  $state = \Drupal::state();
+
+  $last_uuid_check = $state->get('entity_share_client_test.last_uuid_check', 0);
+  $current_time = \Drupal::time()->getRequestTime();
+
+  // Check the UUIDs every week (3600x24x7).
+  if (($last_uuid_check + 604800) < $current_time) {
+    // Scan the channels to store UUIDs in the queue.
+    foreach ($remotes as $remote_id => $remote) {
+      $jsonapi_helper->setRemote($remote);
+      $channel_infos = $remote_manager->getChannelsInfos($remote);
+
+      foreach ($channel_infos as $channel_id => $channel_info) {
+        $http_client = $remote_manager->prepareJsonApiClient($remote);
+        $url_uuid = $channel_info['url_uuid'];
+
+        // Loop on pagination.
+        while ($url_uuid) {
+          $json_response = $http_client->get($url_uuid)
+            ->getBody()
+            ->getContents();
+          $json = Json::decode($json_response);
+
+          // Add items to the queue.
+          foreach ($jsonapi_helper->prepareData($json['data']) as $uuid_data) {
+            $queue->createItem([
+              'remote_id' => $remote_id,
+              'channel_id' => $channel_id,
+              'uuid' => $uuid_data['id'],
+            ]);
+          }
+
+          if (isset($json['links']['next'])) {
+            $url_uuid = $json['links']['next'];
+          }
+          else {
+            $url_uuid = FALSE;
+          }
+        }
+      }
+    }
+    $state->set('entity_share_client_test.last_uuid_check', $current_time);
+  }
+
+  // Prepare an array of info to limit the number of request.
+  $request_info = [];
+  for ($iteration = 1; $iteration <= 50; $iteration++) {
+    if ($queue_item = $queue->claimItem()) {
+      $queue_item_data = $queue_item->data;
+      $remote_id = $queue_item_data['remote_id'];
+      $channel_id = $queue_item_data['channel_id'];
+      $uuid = $queue_item_data['uuid'];
+
+      if (!isset($request_info[$remote_id])) {
+        $request_info[$remote_id] = [];
+      }
+      if (!isset($request_info[$remote_id][$channel_id])) {
+        $request_info[$remote_id][$channel_id] = [];
+      }
+      $request_info[$remote_id][$channel_id][] = $uuid;
+
+      $queue->deleteItem($queue_item);
+    }
+    else {
+      break;
+    }
+  }
+
+  // Process the import of content.
+  foreach ($request_info as $remote_id => $remote_channels) {
+    $remote = $remotes[$remote_id];
+    $channel_infos = $remote_manager->getChannelsInfos($remote);
+    $jsonapi_helper->setRemote($remote);
+    $http_client = $remote_manager->prepareJsonApiClient($remote);
+    foreach ($remote_channels as $channel_id => $uuids) {
+      // Prepare the URL to restrict to the item.
+      $url = $channel_infos[$channel_id]['url'];
+      $parsed_url = UrlHelper::parse($url);
+      $query = $parsed_url['query'];
+      $query['filter']['uuid-filter'] = [
+        'condition' => [
+          'path' => 'uuid',
+          'operator' => 'IN',
+          'value' => $uuids,
+        ],
+      ];
+      $query = UrlHelper::buildQuery($query);
+      $prepared_url = $parsed_url['path'] . '?' . $query;
+
+      $json_response = $http_client->get($prepared_url)
+        ->getBody()
+        ->getContents();
+      $json = Json::decode($json_response);
+      $jsonapi_helper->importEntityListData($jsonapi_helper->prepareData($json['data']));
+    }
+  }
+}

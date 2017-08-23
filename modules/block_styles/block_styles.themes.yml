@@ -1,0 +1,8 @@
+block__clean:
+  label: Clean Wrapper
+  type: block
+  category: Block
+  configuration:
+    path: templates/clean
+    base hook: block
+    render element: elements

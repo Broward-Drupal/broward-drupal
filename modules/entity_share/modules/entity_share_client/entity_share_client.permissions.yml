@@ -1,0 +1,8 @@
+administer_remote_entity:
+  title: 'Administer remote entity'
+  description: 'Allows to administer the remote websites.'
+  restrict access: true
+
+entity_share_client_pull_content:
+  title: 'Pull remote entities'
+  description: 'Access the entity share pull form.'
