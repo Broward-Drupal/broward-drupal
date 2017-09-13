@@ -6,7 +6,7 @@
 3. Edit the README.md file to include your name and role in the relativity project. 
 4. Commit your changes with the Title "Update README.md" and Description of "Add {YOUR NAME} to README.md"
 5. On the next screen click **Create Pull Request**
-6. Edit the description and title to inform us what your PR (Pull Request) is about and submit the PR.
+6. Edit the title {FEATURE NAME} {#ISSUE NUMBER} and description to inform us what your PR (Pull Request) is about and submit the PR.
 7. Wait for feedback from Project Manager or Lead Dev if your PR will be merged or needs items addressed. 
 8. Your PR is merged - Congratulations you can move on to step 2.
 
