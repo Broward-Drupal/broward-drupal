@@ -1,0 +1,8 @@
+name: relativity-event-management
+recipe: pantheon
+config:
+  framework: drupal8
+  xdebug: true
+  env: dev
+  site: relativity-event-management
+  id: 20b7d40a-804e-487a-8864-b467c7c2df4e
