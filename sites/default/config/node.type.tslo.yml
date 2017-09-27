@@ -1,0 +1,17 @@
+uuid: 71640933-a45d-4677-9500-5eab3664768a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Time Slot'
+type: tslo
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

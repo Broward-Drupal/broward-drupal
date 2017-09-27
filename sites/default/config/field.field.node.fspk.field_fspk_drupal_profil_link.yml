@@ -1,0 +1,23 @@
+uuid: 419dee8a-9636-47c6-8361-ae18b1cbec66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_drupal_profil_link
+    - node.type.fspk
+  module:
+    - link
+id: node.fspk.field_fspk_drupal_profil_link
+field_name: field_fspk_drupal_profil_link
+entity_type: node
+bundle: fspk
+label: 'Drupal Profil Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

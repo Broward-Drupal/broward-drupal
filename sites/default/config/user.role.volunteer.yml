@@ -1,0 +1,10 @@
+uuid: 6b102329-f530-4feb-90c6-ac981520d1bf
+langcode: en
+status: true
+dependencies: {  }
+id: volunteer
+label: Volunteer
+weight: 0
+is_admin: null
+permissions:
+  - 'view the administration theme'

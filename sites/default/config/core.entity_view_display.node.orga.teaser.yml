@@ -1,0 +1,18 @@
+uuid: 32bf34a1-185d-4ab6-9b60-7e104d335f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.orga
+  module:
+    - user
+id: node.orga.teaser
+targetEntityType: node
+bundle: orga
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

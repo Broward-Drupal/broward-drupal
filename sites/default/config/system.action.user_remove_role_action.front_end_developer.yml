@@ -1,0 +1,14 @@
+uuid: 14895010-1b02-48f1-96ca-c638ad168ffb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.front_end_developer
+  module:
+    - user
+id: user_remove_role_action.front_end_developer
+label: 'Remove the Front End Developer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: front_end_developer

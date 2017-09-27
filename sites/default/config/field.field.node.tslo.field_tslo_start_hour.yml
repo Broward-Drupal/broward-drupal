@@ -1,0 +1,21 @@
+uuid: 11508e77-f999-4a83-b91a-5b7546fc3487
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tslo_start_hour
+    - node.type.tslo
+  module:
+    - options
+id: node.tslo.field_tslo_start_hour
+field_name: field_tslo_start_hour
+entity_type: node
+bundle: tslo
+label: 'Start Hour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

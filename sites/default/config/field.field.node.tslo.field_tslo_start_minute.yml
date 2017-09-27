@@ -1,0 +1,21 @@
+uuid: 054b96e5-528e-4090-a409-8b0325b07ded
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tslo_start_minute
+    - node.type.tslo
+  module:
+    - options
+id: node.tslo.field_tslo_start_minute
+field_name: field_tslo_start_minute
+entity_type: node
+bundle: tslo
+label: 'Start Minute'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

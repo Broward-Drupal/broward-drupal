@@ -1,0 +1,14 @@
+uuid: 8d08995a-731d-421f-9085-8ee5c9f4de3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lead_front_end_developer
+  module:
+    - user
+id: user_add_role_action.lead_front_end_developer
+label: 'Add the Lead Front End Developer role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lead_front_end_developer

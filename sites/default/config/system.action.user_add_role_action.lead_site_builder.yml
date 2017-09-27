@@ -1,0 +1,14 @@
+uuid: 4989af79-f545-4542-a3ae-39caab8dee40
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lead_site_builder
+  module:
+    - user
+id: user_add_role_action.lead_site_builder
+label: 'Add the Lead Site Builder role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lead_site_builder

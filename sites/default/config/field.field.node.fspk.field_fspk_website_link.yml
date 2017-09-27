@@ -1,0 +1,23 @@
+uuid: 117583a0-fcf5-47c7-90fb-659905db319b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_website_link
+    - node.type.fspk
+  module:
+    - link
+id: node.fspk.field_fspk_website_link
+field_name: field_fspk_website_link
+entity_type: node
+bundle: fspk
+label: 'Website Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

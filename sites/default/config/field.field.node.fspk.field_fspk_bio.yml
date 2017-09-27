@@ -1,0 +1,21 @@
+uuid: d53a8ee1-0ac1-4dc7-9cd6-0122e42e937c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_bio
+    - node.type.fspk
+  module:
+    - text
+id: node.fspk.field_fspk_bio
+field_name: field_fspk_bio
+entity_type: node
+bundle: fspk
+label: Bio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

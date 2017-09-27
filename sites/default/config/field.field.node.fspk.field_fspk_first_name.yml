@@ -1,0 +1,21 @@
+uuid: ac188959-31d7-4ba4-953a-f6a0cf77acc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_first_name
+    - node.type.fspk
+  module:
+    - text
+id: node.fspk.field_fspk_first_name
+field_name: field_fspk_first_name
+entity_type: node
+bundle: fspk
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
