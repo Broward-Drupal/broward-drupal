@@ -1,0 +1,23 @@
+uuid: 998ef9ef-65e8-458b-83ff-2b9441d3385d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_link
+    - node.type.hero
+  module:
+    - link
+id: node.hero.field_hero_link
+field_name: field_hero_link
+entity_type: node
+bundle: hero
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

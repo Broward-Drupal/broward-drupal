@@ -1,0 +1,28 @@
+uuid: a0f22b80-61dc-4fa4-9416-cae43f3fd759
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spon_styp_ref
+    - node.type.spon
+    - taxonomy.vocabulary.styp
+id: node.spon.field_spon_styp_ref
+field_name: field_spon_styp_ref
+entity_type: node
+bundle: spon
+label: 'Sponsor Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      styp: styp
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

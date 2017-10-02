@@ -1,0 +1,21 @@
+uuid: 9fded1d8-4b72-4278-8202-7dfb350ef1c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sdoc_body
+    - node.type.sdoc
+  module:
+    - text
+id: node.sdoc.field_sdoc_body
+field_name: field_sdoc_body
+entity_type: node
+bundle: sdoc
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

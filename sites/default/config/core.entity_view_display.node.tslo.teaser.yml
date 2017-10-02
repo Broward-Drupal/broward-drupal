@@ -1,0 +1,18 @@
+uuid: 3ba642cb-5339-4930-ae6e-a427423d7d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.tslo
+  module:
+    - user
+id: node.tslo.teaser
+targetEntityType: node
+bundle: tslo
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

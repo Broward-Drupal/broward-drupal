@@ -1,0 +1,14 @@
+uuid: 7ee6d136-68ed-4dc0-9350-a6eba74b99c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lead_front_end_developer
+  module:
+    - user
+id: user_remove_role_action.lead_front_end_developer
+label: 'Remove the Lead Front End Developer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lead_front_end_developer

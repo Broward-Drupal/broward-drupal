@@ -1,0 +1,28 @@
+uuid: 53cf7e09-3019-4187-8756-ecfae7128a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mcon_docu_ref
+    - node.type.docu
+    - node.type.mcon
+id: node.mcon.field_mcon_docu_ref
+field_name: field_mcon_docu_ref
+entity_type: node
+bundle: mcon
+label: Document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      docu: docu
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

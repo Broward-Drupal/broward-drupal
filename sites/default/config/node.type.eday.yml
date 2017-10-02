@@ -1,0 +1,17 @@
+uuid: 5ba85682-5850-4cee-b431-5c2180ce1b4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Event Day'
+type: eday
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

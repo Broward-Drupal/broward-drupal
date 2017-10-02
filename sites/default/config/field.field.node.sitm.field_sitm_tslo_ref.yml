@@ -1,0 +1,28 @@
+uuid: 35590c4e-94d5-4aff-ada6-26ac1cb8fa9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sitm_tslo_ref
+    - node.type.sitm
+    - node.type.tslo
+id: node.sitm.field_sitm_tslo_ref
+field_name: field_sitm_tslo_ref
+entity_type: node
+bundle: sitm
+label: 'Time Slot'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tslo: tslo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

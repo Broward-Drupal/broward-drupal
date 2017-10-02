@@ -1,0 +1,21 @@
+uuid: 6996d21c-eae3-43cb-a824-1dcd5be0e28f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spon_body
+    - node.type.spon
+  module:
+    - text
+id: node.spon.field_spon_body
+field_name: field_spon_body
+entity_type: node
+bundle: spon
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

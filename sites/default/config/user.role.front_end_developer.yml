@@ -1,0 +1,10 @@
+uuid: dd53ac52-cd5b-47bf-9dc7-a8b33e29bcba
+langcode: en
+status: true
+dependencies: {  }
+id: front_end_developer
+label: 'Front End Developer'
+weight: -4
+is_admin: null
+permissions:
+  - 'view the administration theme'

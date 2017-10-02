@@ -1,0 +1,17 @@
+uuid: 8f57efd5-9b79-4d37-8a6e-b619287a6de1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Schedule Item'
+type: sitm
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

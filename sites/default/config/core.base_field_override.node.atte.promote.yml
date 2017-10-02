@@ -1,0 +1,22 @@
+uuid: 76f2a294-5d8f-4fcb-8e37-32128648f06b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.atte
+id: node.atte.promote
+field_name: promote
+entity_type: node
+bundle: atte
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,14 @@
+uuid: c0eefc26-4952-4e69-8691-978f9d8482c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.featured_speaker
+  module:
+    - user
+id: user_add_role_action.featured_speaker
+label: 'Add the Featured Speaker role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: featured_speaker

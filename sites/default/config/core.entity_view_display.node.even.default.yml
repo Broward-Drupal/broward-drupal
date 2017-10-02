@@ -1,0 +1,89 @@
+uuid: 53eaab4c-3eee-49eb-aa2f-d9ef1c862255
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.even.field_even_body
+    - field.field.node.even.field_even_eday_ref
+    - field.field.node.even.field_even_fspk_ref
+    - field.field.node.even.field_even_igal_ref
+    - field.field.node.even.field_even_sitm_ref
+    - field.field.node.even.field_even_spon_ref
+    - field.field.node.even.field_even_tslo_ref
+    - field.field.node.even.field_even_venu_ref
+    - node.type.even
+  module:
+    - text
+    - user
+id: node.even.default
+targetEntityType: node
+bundle: even
+mode: default
+content:
+  field_even_body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_even_eday_ref:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_even_fspk_ref:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_even_igal_ref:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_even_sitm_ref:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_even_spon_ref:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_even_tslo_ref:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_even_venu_ref:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

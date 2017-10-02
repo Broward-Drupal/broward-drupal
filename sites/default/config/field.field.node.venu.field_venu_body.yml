@@ -1,0 +1,21 @@
+uuid: 24682fdc-4b28-4ced-8286-39e19dce6922
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venu_body
+    - node.type.venu
+  module:
+    - text
+id: node.venu.field_venu_body
+field_name: field_venu_body
+entity_type: node
+bundle: venu
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

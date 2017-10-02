@@ -1,0 +1,9 @@
+uuid: f87594b0-4d30-4528-89fa-ddeee5d943ae
+langcode: en
+status: true
+dependencies: {  }
+name: 'Member Contribution Type'
+vid: mtyp
+description: ''
+hierarchy: 0
+weight: 0

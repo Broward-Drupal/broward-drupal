@@ -1,0 +1,29 @@
+uuid: ef102cae-de1f-439b-9200-f63398a2af9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_even_sitm_ref
+    - node.type.even
+    - node.type.sitm
+id: node.even.field_even_sitm_ref
+field_name: field_even_sitm_ref
+entity_type: node
+bundle: even
+label: 'Schedule Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sitm: sitm
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

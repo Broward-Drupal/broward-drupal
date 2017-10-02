@@ -1,0 +1,26 @@
+uuid: d19e8eac-2ba7-4c12-a6b7-959dbce1d0cb
+langcode: en
+status: true
+dependencies: {  }
+id: lead_front_end_developer
+label: 'Lead Front End Developer'
+weight: -5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access shortcuts'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer image styles'
+  - 'administer responsive images'
+  - 'administer slick'
+  - 'administer themes'
+  - 'administer views'
+  - 'change own username'
+  - 'use text format basic_html'
+  - 'view the administration theme'

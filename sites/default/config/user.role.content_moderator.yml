@@ -1,0 +1,10 @@
+uuid: 0d492b6a-7c32-4506-8c05-4cd81596859b
+langcode: en
+status: true
+dependencies: {  }
+id: content_moderator
+label: 'Content Moderator'
+weight: -3
+is_admin: null
+permissions:
+  - 'view the administration theme'

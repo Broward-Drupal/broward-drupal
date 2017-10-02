@@ -1,0 +1,10 @@
+uuid: 714b5a23-c332-45e0-b682-ac4b3a5cfd05
+langcode: en
+status: true
+dependencies: {  }
+id: featured_speaker
+label: 'Featured Speaker'
+weight: -1
+is_admin: null
+permissions:
+  - 'view the administration theme'

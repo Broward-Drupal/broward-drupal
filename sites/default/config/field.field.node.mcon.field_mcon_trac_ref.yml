@@ -1,0 +1,28 @@
+uuid: e56fecc9-4e43-4f89-84d5-16419b002ece
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mcon_trac_ref
+    - node.type.mcon
+    - taxonomy.vocabulary.trac
+id: node.mcon.field_mcon_trac_ref
+field_name: field_mcon_trac_ref
+entity_type: node
+bundle: mcon
+label: Track
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      trac: trac
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: fab56ecb-dcee-4eda-a99e-3ef20fe9af42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orga_body
+    - node.type.orga
+  module:
+    - text
+id: node.orga.field_orga_body
+field_name: field_orga_body
+entity_type: node
+bundle: orga
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

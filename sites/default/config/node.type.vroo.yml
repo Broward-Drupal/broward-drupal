@@ -1,0 +1,17 @@
+uuid: 06b60c41-6a3b-48bf-8ed8-e8d2116303a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Venue Room'
+type: vroo
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

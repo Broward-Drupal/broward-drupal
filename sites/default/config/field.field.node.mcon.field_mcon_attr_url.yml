@@ -1,0 +1,23 @@
+uuid: 0f459dcc-a8d1-443c-a412-e82ba9e7f5d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mcon_attr_url
+    - node.type.mcon
+  module:
+    - link
+id: node.mcon.field_mcon_attr_url
+field_name: field_mcon_attr_url
+entity_type: node
+bundle: mcon
+label: 'Attribution URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

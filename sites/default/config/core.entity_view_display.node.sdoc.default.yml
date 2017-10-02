@@ -1,0 +1,26 @@
+uuid: 30961cde-5312-4e4e-b431-c4abb14dc910
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sdoc.field_sdoc_body
+    - node.type.sdoc
+  module:
+    - text
+    - user
+id: node.sdoc.default
+targetEntityType: node
+bundle: sdoc
+mode: default
+content:
+  field_sdoc_body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

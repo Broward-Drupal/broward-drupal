@@ -1,0 +1,18 @@
+uuid: 85b6cf08-8ce3-4c8e-9186-52d532c7439d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.eday
+  module:
+    - user
+id: node.eday.teaser
+targetEntityType: node
+bundle: eday
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

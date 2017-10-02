@@ -1,0 +1,14 @@
+uuid: 558b3b46-9e4e-49c4-ab4f-5f8004b30933
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_moderator
+  module:
+    - user
+id: user_add_role_action.content_moderator
+label: 'Add the Content Moderator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_moderator

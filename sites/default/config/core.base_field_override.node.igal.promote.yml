@@ -1,0 +1,22 @@
+uuid: e48a4760-6b8d-4cd3-9ce8-9b9c9bf845ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.igal
+id: node.igal.promote
+field_name: promote
+entity_type: node
+bundle: igal
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

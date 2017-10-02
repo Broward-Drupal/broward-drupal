@@ -1,0 +1,21 @@
+uuid: 698eb775-f0a2-4524-abd7-e1303b423cf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venu_phone
+    - node.type.venu
+  module:
+    - telephone
+id: node.venu.field_venu_phone
+field_name: field_venu_phone
+entity_type: node
+bundle: venu
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

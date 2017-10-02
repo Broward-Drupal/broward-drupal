@@ -1,0 +1,46 @@
+uuid: 115226d6-a635-43cc-a2fb-be326d9b186b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sitm.field_sitm_sess_ref
+    - field.field.node.sitm.field_sitm_tslo_ref
+    - node.type.sitm
+  module:
+    - path
+id: node.sitm.default
+targetEntityType: node
+bundle: sitm
+mode: default
+content:
+  field_sitm_sess_ref:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sitm_tslo_ref:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

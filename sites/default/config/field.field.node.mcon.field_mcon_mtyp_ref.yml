@@ -1,0 +1,28 @@
+uuid: 81e93b65-f488-4ed5-9314-a71c77a01af9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mcon_mtyp_ref
+    - node.type.mcon
+    - taxonomy.vocabulary.mtyp
+id: node.mcon.field_mcon_mtyp_ref
+field_name: field_mcon_mtyp_ref
+entity_type: node
+bundle: mcon
+label: 'Member Contribution Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      mtyp: mtyp
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
