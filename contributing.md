@@ -1,7 +1,7 @@
 # Contributing to Relativity Project
 
 ## Stage 1
-1. Create a Github account if you do not already have one [GitHub](https://github.com)
+1. Create a Github account if you do not already have one [GitHub](https://github.com/join)
 2. Find README.md
 3. Edit the README.md by clicking on the pencil icon (see [screenshot](https://user-images.githubusercontent.com/22901/32456182-b0a4af34-c2f2-11e7-905d-bf35a1784890.jpg))
 4. Add your name and role in the relativity project.
