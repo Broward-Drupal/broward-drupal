@@ -1,0 +1,14 @@
+uuid: 4e5c64a9-b06d-4be0-b697-3ea77fab0d1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.front_end_developer
+  module:
+    - user
+id: user_add_role_action.front_end_developer
+label: 'Add the Front End Developer role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: front_end_developer

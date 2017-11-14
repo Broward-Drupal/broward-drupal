@@ -1,0 +1,21 @@
+uuid: 893f8c88-519e-44b9-85d4-491375a99fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tslo_end_meridiem
+    - node.type.tslo
+  module:
+    - options
+id: node.tslo.field_tslo_end_meridiem
+field_name: field_tslo_end_meridiem
+entity_type: node
+bundle: tslo
+label: 'End Meridiem'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: e0d8157f-b64c-4619-a5b3-dfcc37dffd8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eday_date
+    - node.type.eday
+  module:
+    - datetime
+id: node.eday.field_eday_date
+field_name: field_eday_date
+entity_type: node
+bundle: eday
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

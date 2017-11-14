@@ -1,0 +1,21 @@
+uuid: aac7746c-06c7-492e-935d-cb7a97ec605a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_work_title
+    - node.type.fspk
+  module:
+    - text
+id: node.fspk.field_fspk_work_title
+field_name: field_fspk_work_title
+entity_type: node
+bundle: fspk
+label: 'Work Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

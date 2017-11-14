@@ -1,0 +1,23 @@
+uuid: 6281d55a-2cfd-43a4-997f-77870d361ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spon_weli
+    - node.type.spon
+  module:
+    - link
+id: node.spon.field_spon_weli
+field_name: field_spon_weli
+entity_type: node
+bundle: spon
+label: 'Website Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

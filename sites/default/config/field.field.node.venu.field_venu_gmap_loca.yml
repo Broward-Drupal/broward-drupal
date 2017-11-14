@@ -1,0 +1,19 @@
+uuid: e9d51c44-2f7c-4019-869a-27f7ef2e2d96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venu_gmap_loca
+    - node.type.venu
+id: node.venu.field_venu_gmap_loca
+field_name: field_venu_gmap_loca
+entity_type: node
+bundle: venu
+label: 'GMAP Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: 40854adc-b606-4436-92a0-c329451a7f24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.eday.field_eday_date
+    - node.type.eday
+  module:
+    - datetime
+    - user
+id: node.eday.default
+targetEntityType: node
+bundle: eday
+mode: default
+content:
+  field_eday_date:
+    weight: 101
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

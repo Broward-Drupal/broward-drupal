@@ -1,0 +1,21 @@
+uuid: d403f52f-bc25-4f79-bb14-6383c192e0b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sess_stat
+    - node.type.sess
+  module:
+    - options
+id: node.sess.field_sess_stat
+field_name: field_sess_stat
+entity_type: node
+bundle: sess
+label: Status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

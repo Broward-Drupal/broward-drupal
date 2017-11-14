@@ -1,0 +1,18 @@
+uuid: 0aaaed61-f2ec-4e11-b7a1-ad7d3fe79500
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.sdoc
+  module:
+    - user
+id: node.sdoc.teaser
+targetEntityType: node
+bundle: sdoc
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

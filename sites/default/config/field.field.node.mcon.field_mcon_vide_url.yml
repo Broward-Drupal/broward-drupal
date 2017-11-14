@@ -1,0 +1,23 @@
+uuid: 81790f0e-771e-4761-817d-e634a607bebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mcon_vide_url
+    - node.type.mcon
+  module:
+    - link
+id: node.mcon.field_mcon_vide_url
+field_name: field_mcon_vide_url
+entity_type: node
+bundle: mcon
+label: 'Video URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

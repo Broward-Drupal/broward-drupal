@@ -1,0 +1,14 @@
+uuid: 8bf4c6ad-0a3d-4144-9a22-1a8f02e91220
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lead_site_builder
+  module:
+    - user
+id: user_remove_role_action.lead_site_builder
+label: 'Remove the Lead Site Builder role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lead_site_builder

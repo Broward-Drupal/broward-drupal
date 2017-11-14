@@ -1,0 +1,19 @@
+uuid: 7416d83f-1e8c-4158-9ae5-d57a3b29ae02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vroo_buro
+    - node.type.vroo
+id: node.vroo.field_vroo_buro
+field_name: field_vroo_buro
+entity_type: node
+bundle: vroo
+label: 'Building / Room'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

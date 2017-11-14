@@ -1,0 +1,50 @@
+uuid: 8f45cf2b-0ef9-4f31-9cfd-bd4097c3190c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.docu.field_docu_desc
+    - field.field.node.docu.field_docu_fiup
+    - node.type.docu
+  module:
+    - file
+    - path
+id: node.docu.default
+targetEntityType: node
+bundle: docu
+mode: default
+content:
+  field_docu_desc:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_docu_fiup:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: 54ed332e-845d-4604-8c50-e1d132e9fdb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_atte_body
+    - node.type.atte
+  module:
+    - text
+id: node.atte.field_atte_body
+field_name: field_atte_body
+entity_type: node
+bundle: atte
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

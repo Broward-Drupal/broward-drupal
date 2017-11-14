@@ -1,0 +1,23 @@
+uuid: 0ac8c7d0-fafb-4f21-bf24-1ad06ab4f7c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - link
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_hero_link
+field_name: field_hero_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

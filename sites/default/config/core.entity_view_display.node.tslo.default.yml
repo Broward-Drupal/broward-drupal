@@ -1,0 +1,66 @@
+uuid: 23bbac5a-42fd-419c-8ba7-2880fd6d7c38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tslo.field_tslo_end_hour
+    - field.field.node.tslo.field_tslo_end_meridiem
+    - field.field.node.tslo.field_tslo_end_minute
+    - field.field.node.tslo.field_tslo_start_hour
+    - field.field.node.tslo.field_tslo_start_meridiem
+    - field.field.node.tslo.field_tslo_start_minute
+    - node.type.tslo
+  module:
+    - options
+    - user
+id: node.tslo.default
+targetEntityType: node
+bundle: tslo
+mode: default
+content:
+  field_tslo_end_hour:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tslo_end_meridiem:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tslo_end_minute:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tslo_start_hour:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tslo_start_meridiem:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tslo_start_minute:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

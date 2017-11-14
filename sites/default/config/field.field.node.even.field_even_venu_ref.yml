@@ -1,0 +1,29 @@
+uuid: 99c1d872-49e2-4c16-bc3e-97c6c449a51c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_even_venu_ref
+    - node.type.even
+    - node.type.venu
+id: node.even.field_even_venu_ref
+field_name: field_even_venu_ref
+entity_type: node
+bundle: even
+label: Venue
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      venu: venu
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

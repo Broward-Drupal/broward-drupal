@@ -1,0 +1,22 @@
+uuid: 6ce50832-64f9-4dfc-b55a-0ec394d0e3a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mcon
+id: node.mcon.promote
+field_name: promote
+entity_type: node
+bundle: mcon
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,17 @@
+uuid: 27757ce8-6a60-441c-8bd5-4056bd7c4975
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Attendee
+type: atte
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

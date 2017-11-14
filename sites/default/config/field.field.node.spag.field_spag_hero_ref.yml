@@ -1,0 +1,28 @@
+uuid: 16976d91-6cc1-491d-a982-ed681808ea89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spag_hero_ref
+    - node.type.hero
+    - node.type.spag
+id: node.spag.field_spag_hero_ref
+field_name: field_spag_hero_ref
+entity_type: node
+bundle: spag
+label: Hero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

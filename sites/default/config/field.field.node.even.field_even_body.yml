@@ -1,0 +1,21 @@
+uuid: 370d0a97-98ad-4f9d-a540-207a88d4a20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_even_body
+    - node.type.even
+  module:
+    - text
+id: node.even.field_even_body
+field_name: field_even_body
+entity_type: node
+bundle: even
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

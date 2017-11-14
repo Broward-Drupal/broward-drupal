@@ -1,0 +1,15 @@
+uuid: fecaa5da-c35e-471c-9174-88cfe14bff2a
+name: 'Relativity Event Management'
+mail: webmaster@broward-drupal.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

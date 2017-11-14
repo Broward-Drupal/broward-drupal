@@ -1,0 +1,17 @@
+uuid: 5f97f2ba-52dc-49f2-ba35-124ac3e5aac0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Card
+type: card
+description: 'Front block view'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

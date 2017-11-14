@@ -1,0 +1,19 @@
+uuid: ee354c5a-eb70-49c1-a563-184048dafa60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_teas
+    - node.type.card
+id: node.card.field_card_teas
+field_name: field_card_teas
+entity_type: node
+bundle: card
+label: 'Teaser Snippet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

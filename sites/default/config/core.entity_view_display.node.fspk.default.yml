@@ -1,0 +1,125 @@
+uuid: 0ee63896-197b-499c-a1c7-5163a5dc8405
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fspk.field_fspk_bio
+    - field.field.node.fspk.field_fspk_company
+    - field.field.node.fspk.field_fspk_drupal_profil_link
+    - field.field.node.fspk.field_fspk_email
+    - field.field.node.fspk.field_fspk_first_name
+    - field.field.node.fspk.field_fspk_last_name
+    - field.field.node.fspk.field_fspk_middle_initial
+    - field.field.node.fspk.field_fspk_portrait
+    - field.field.node.fspk.field_fspk_twitter_profile_link
+    - field.field.node.fspk.field_fspk_website_link
+    - field.field.node.fspk.field_fspk_work_title
+    - node.type.fspk
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.fspk.default
+targetEntityType: node
+bundle: fspk
+mode: default
+content:
+  field_fspk_bio:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fspk_company:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fspk_drupal_profil_link:
+    weight: 107
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_fspk_email:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_fspk_first_name:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fspk_last_name:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fspk_middle_initial:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fspk_portrait:
+    weight: 110
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_fspk_twitter_profile_link:
+    weight: 108
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_fspk_website_link:
+    weight: 109
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_fspk_work_title:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

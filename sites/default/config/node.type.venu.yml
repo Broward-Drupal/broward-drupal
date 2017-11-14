@@ -1,0 +1,17 @@
+uuid: 8ac3e5d9-ed79-4c25-affb-9ac914b32129
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Venue
+type: venu
+description: 'Location of event'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

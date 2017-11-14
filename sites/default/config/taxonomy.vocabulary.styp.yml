@@ -1,0 +1,9 @@
+uuid: 00b9b757-a085-453d-9eb3-781f5ab5c038
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sponsor Level'
+vid: styp
+description: ''
+hierarchy: 0
+weight: 0

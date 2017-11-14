@@ -1,0 +1,28 @@
+uuid: 5d60720a-e1aa-41e1-a908-0963b48f8a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sess_trac_ref
+    - node.type.sess
+    - taxonomy.vocabulary.trac
+id: node.sess.field_sess_trac_ref
+field_name: field_sess_trac_ref
+entity_type: node
+bundle: sess
+label: Track
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      trac: trac
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

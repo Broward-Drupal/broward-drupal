@@ -1,0 +1,99 @@
+uuid: da8d754b-15a4-4485-a657-c944bdde4980
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tslo.field_tslo_end_hour
+    - field.field.node.tslo.field_tslo_end_meridiem
+    - field.field.node.tslo.field_tslo_end_minute
+    - field.field.node.tslo.field_tslo_start_hour
+    - field.field.node.tslo.field_tslo_start_meridiem
+    - field.field.node.tslo.field_tslo_start_minute
+    - node.type.tslo
+  module:
+    - path
+id: node.tslo.default
+targetEntityType: node
+bundle: tslo
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tslo_end_hour:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tslo_end_meridiem:
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tslo_end_minute:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tslo_start_hour:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tslo_start_meridiem:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tslo_start_minute:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

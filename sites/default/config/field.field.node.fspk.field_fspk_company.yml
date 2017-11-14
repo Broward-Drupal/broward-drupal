@@ -1,0 +1,21 @@
+uuid: c11ef7d4-d701-4fad-9fc3-1b3b4f436589
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_company
+    - node.type.fspk
+  module:
+    - text
+id: node.fspk.field_fspk_company
+field_name: field_fspk_company
+entity_type: node
+bundle: fspk
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

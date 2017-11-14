@@ -1,0 +1,18 @@
+uuid: 9e52d163-9de0-4564-a488-fa52c703a355
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.mcon
+  module:
+    - user
+id: node.mcon.teaser
+targetEntityType: node
+bundle: mcon
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

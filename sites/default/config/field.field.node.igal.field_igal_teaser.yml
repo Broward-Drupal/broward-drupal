@@ -1,0 +1,21 @@
+uuid: 8a460f75-d875-43b2-958a-1efe1481d7d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_igal_teaser
+    - node.type.igal
+  module:
+    - text
+id: node.igal.field_igal_teaser
+field_name: field_igal_teaser
+entity_type: node
+bundle: igal
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

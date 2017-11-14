@@ -1,0 +1,70 @@
+uuid: a1a24719-a11d-4a51-b1e4-cd5377108f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.spon.field_spon_body
+    - field.field.node.spon.field_spon_logo
+    - field.field.node.spon.field_spon_styp_ref
+    - field.field.node.spon.field_spon_weli
+    - image.style.thumbnail
+    - node.type.spon
+  module:
+    - image
+    - link
+    - path
+    - text
+id: node.spon.default
+targetEntityType: node
+bundle: spon
+mode: default
+content:
+  field_spon_body:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_spon_logo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_spon_styp_ref:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_spon_weli:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

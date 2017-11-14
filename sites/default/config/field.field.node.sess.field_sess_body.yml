@@ -1,0 +1,21 @@
+uuid: 260683b0-9ebe-40af-9c3a-6666851f62c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sess_body
+    - node.type.sess
+  module:
+    - text
+id: node.sess.field_sess_body
+field_name: field_sess_body
+entity_type: node
+bundle: sess
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

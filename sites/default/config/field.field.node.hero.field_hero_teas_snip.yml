@@ -1,0 +1,19 @@
+uuid: 74c14d51-f653-4a35-8eea-8a17be1be3cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_teas_snip
+    - node.type.hero
+id: node.hero.field_hero_teas_snip
+field_name: field_hero_teas_snip
+entity_type: node
+bundle: hero
+label: 'Teaser Snippet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

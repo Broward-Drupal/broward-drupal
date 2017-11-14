@@ -1,0 +1,28 @@
+uuid: 8e3c9d21-5478-43b4-96fa-8c9b538a060a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venu_hero_ref
+    - node.type.hero
+    - node.type.venu
+id: node.venu.field_venu_hero_ref
+field_name: field_venu_hero_ref
+entity_type: node
+bundle: venu
+label: Hero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: f2a5ba3e-c690-47c1-84a2-c9ca46519a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sess_atyp_ref
+    - node.type.sess
+    - taxonomy.vocabulary.atyp
+id: node.sess.field_sess_atyp_ref
+field_name: field_sess_atyp_ref
+entity_type: node
+bundle: sess
+label: Audience
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      atyp: atyp
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

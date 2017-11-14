@@ -1,0 +1,18 @@
+uuid: 8c11cad8-bf3f-4251-8f0a-7445c1d8572a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.card
+  module:
+    - user
+id: node.card.teaser
+targetEntityType: node
+bundle: card
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

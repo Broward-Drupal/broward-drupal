@@ -1,0 +1,19 @@
+uuid: 647235c4-cf37-47b2-b5da-f32d7a560cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fspk_email
+    - node.type.fspk
+id: node.fspk.field_fspk_email
+field_name: field_fspk_email
+entity_type: node
+bundle: fspk
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

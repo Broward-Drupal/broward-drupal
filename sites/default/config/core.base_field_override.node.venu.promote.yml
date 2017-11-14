@@ -1,0 +1,22 @@
+uuid: 1304d385-d388-4da2-add2-7a6f17755957
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.venu
+id: node.venu.promote
+field_name: promote
+entity_type: node
+bundle: venu
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

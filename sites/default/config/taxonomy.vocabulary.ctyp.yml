@@ -1,0 +1,9 @@
+uuid: 61ddf9a0-3146-49cd-89b8-97620ebcf74f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Card Type'
+vid: ctyp
+description: ''
+hierarchy: 0
+weight: 0

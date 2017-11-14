@@ -1,0 +1,26 @@
+uuid: 5daaf0bf-708d-4f9e-87c9-73fc6db7bda6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.orga.field_orga_body
+    - node.type.orga
+  module:
+    - text
+    - user
+id: node.orga.default
+targetEntityType: node
+bundle: orga
+mode: default
+content:
+  field_orga_body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

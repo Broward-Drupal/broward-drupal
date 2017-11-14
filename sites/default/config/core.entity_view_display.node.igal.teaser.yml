@@ -1,0 +1,18 @@
+uuid: 81947661-24a7-474a-9983-32e20c6dbb24
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.igal
+  module:
+    - user
+id: node.igal.teaser
+targetEntityType: node
+bundle: igal
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

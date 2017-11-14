@@ -1,0 +1,26 @@
+uuid: 0df5beaa-d3e1-48c3-847f-8ddba2ea8215
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_user_first_name
+    - field.field.user.user.field_user_last_name
+    - field.field.user.user.field_user_middle_initial
+    - field.field.user.user.field_user_verify_email
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content: {  }
+hidden:
+  field_user_first_name: true
+  field_user_last_name: true
+  field_user_middle_initial: true
+  field_user_verify_email: true
+  member_for: true
+  user_picture: true

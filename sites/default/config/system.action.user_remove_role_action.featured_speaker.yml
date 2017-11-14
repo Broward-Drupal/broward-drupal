@@ -1,0 +1,14 @@
+uuid: bcbd29d7-3c55-4b22-8d95-fea5a8c28eea
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.featured_speaker
+  module:
+    - user
+id: user_remove_role_action.featured_speaker
+label: 'Remove the Featured Speaker role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: featured_speaker

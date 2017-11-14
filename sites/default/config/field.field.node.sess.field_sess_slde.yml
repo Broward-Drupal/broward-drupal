@@ -1,0 +1,27 @@
+uuid: 76fcb72d-1654-4257-abd9-b189938c6ce9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sess_slde
+    - node.type.sess
+  module:
+    - file
+id: node.sess.field_sess_slde
+field_name: field_sess_slde
+entity_type: node
+bundle: sess
+label: 'Slide Deck'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
